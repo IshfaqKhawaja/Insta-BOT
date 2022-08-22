@@ -1,6 +1,6 @@
 from selenium import webdriver
 import time
-browser = webdriver.Chrome()
+browser = webdriver.Chrome(ChromeDriverManager().install())
 browser.get("https://www.instagram.com/milkmochabear/?hl=en")
 first_div = '//*[@id="fb-root"]'
 js = "var element = document.querySelector('#fb-root'); console.log(element); element.parentNode.removeChild(element)"
